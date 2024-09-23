@@ -1,35 +1,42 @@
-@import "./mixins.scss";
+@import './mixins.scss';
 
 p {
   margin: 0 0 $small-spacing;
 }
 
-
-[textalign="center"]{text-align: center !important}
-[textalign="left"]{text-align: left}
-[textalign="right"]{text-align: right}
-[textalign="justify"]{text-align: justify}
+[textalign='center'] {
+  text-align: center !important;
+}
+[textalign='left'] {
+  text-align: left;
+}
+[textalign='right'] {
+  text-align: right;
+}
+[textalign='justify'] {
+  text-align: justify;
+}
 
 svg {
   fill: currentColor;
 }
 
 // **Line Heights**
-$base-line-height: 1.5;   // Base line height for body text
+$base-line-height: 1.5; // Base line height for body text
 $heading-line-height: 1.2; // Line height for headings
 
 // **Font Weights**
-$font-weight-light: 300;    // Light font weight
-$font-weight-normal: 400;   // Normal font weight
-$font-weight-medium: 500;   // Medium font weight
+$font-weight-light: 300; // Light font weight
+$font-weight-normal: 400; // Normal font weight
+$font-weight-medium: 500; // Medium font weight
 $font-weight-semibold: 600; // Semi-bold font weight
-$font-weight-bold: 700;     // Bold font weight
+$font-weight-bold: 700; // Bold font weight
 
 // **Text Transformations**
-$text-uppercase: uppercase;     // Transform text to uppercase
-$text-capitalize: capitalize;   // Capitalize text
+$text-uppercase: uppercase; // Transform text to uppercase
+$text-capitalize: capitalize; // Capitalize text
 
 // **Font Sizes**
-$fs15: 15px;                // Font size 15px
-$fs20: 20px;                // Font size 20px
-$fs30: 30px;                // Font size 30px
+$fs15: 15px; // Font size 15px
+$fs20: 20px; // Font size 20px
+$fs30: 30px; // Font size 30px
