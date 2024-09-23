@@ -1,23 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo 'Running pre-commit checks: Formatting and linting your project.'
-
-# Check Prettier standards
-yarn format || (
-  echo 'Prettier check failed. Please run `yarn format`, fix the issues, and try again.'
-  exit 1
-)
-
-echo 'Code formatting passed.'
-
-# Check ESLint standards
-yarn lint || (
-  echo 'ESLint check failed. Please fix the linting errors and try again.'
-  exit 1
-)
-
-echo 'Code linting passed.'
-
-# If everything passes, proceed with the commit
-echo 'All checks passed. Proceeding with the commit.'
+npm test
