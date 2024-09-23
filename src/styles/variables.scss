@@ -69,4 +69,4 @@ $xxxl: 1599px;  // Triple extra large devices
 $xxxxl: 1700px; // Quadruple extra large devices
 
 $base-spacing: 1.5em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: calc($base-spacing / 2);
