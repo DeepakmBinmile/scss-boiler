@@ -1,68 +1,71 @@
 // **Color Variables**
-$baseColor: #5f5f5f; // Base gray color
-$white: #fff; // Pure white
-$offWhite: #fafafa; // Off-white shade
-$blue: #3299cc; // Standard blue
-$lightBlue: #eaf5fa; // Light blue shade
-$grey: #384955; // Dark gray
-$lightGrey: #a6b1c2; // Light gray
-$bdrGrey: #eff0f2; // Border gray
-$bdrGrey1: #e3e7ec; // Alternative border gray
-$brightBlue: #536dfe; // Bright blue
-$pink: #ec407a; // Pink color
-$purple: #9c27b0; // Purple color
-$yellow: #fecd54; // Yellow color
-$green: #2cd889; // Green color
-$darkGreen: #4ca07a; // Dark green
-$red: #8f002c; // Red color
-$lightred: #ffe9e9; // Light red
-$darkgrey: #232323; // Very dark gray
-$lightBlack: #504b52; // Light black or dark gray
+$baseColor: #5f5f5f;        // Base gray color
+$white: #fff;               // Pure white
+$offWhite: #fafafa;         // Off-white shade
+$blue: #3299cc;             // Standard blue
+$lightBlue: #eaf5fa;        // Light blue shade
+$grey: #384955;             // Dark gray
+$lightGrey: #a6b1c2;        // Light gray
+$bdrGrey: #eff0f2;          // Border gray
+$bdrGrey1: #e3e7ec;         // Alternative border gray
+$brightBlue: #536dfe;       // Bright blue
+$pink: #ec407a;             // Pink color
+$purple: #9c27b0;           // Purple color
+$yellow: #fecd54;           // Yellow color
+$green: #2cd889;            // Green color
+$darkGreen: #4ca07a;        // Dark green
+$red: #8f002c;              // Red color
+$lightred: #ffe9e9;         // Light red
+$darkgrey: #232323;         // Very dark gray
+$lightBlack: #504B52;       // Light black or dark gray
 
 // **Line Heights**
-$lh24: 24px; // Line height 24px
+$lh24: 24px;                // Line height 24px
 
 // **Spacing Variables**
-$space10: 10px; // Spacing of 10px
-$space20: 20px; // Spacing of 20px
-$space30: 30px; // Spacing of 30px
+$space10: 10px;             // Spacing of 10px
+$space20: 20px;             // Spacing of 20px
+$space30: 30px;             // Spacing of 30px
+
+
 
 // **Border Variables**
-$bdr0: none; // No border
-$bdr1: 1px; // Border width of 1px
+$bdr0: none;                // No border
+$bdr1: 1px;                 // Border width of 1px
 
 // **Positioning**
-$absolute: absolute; // Absolute positioning
-$relative: relative; // Relative positioning
-$fixed: fixed; // Fixed positioning
+$absolute: absolute;        // Absolute positioning
+$relative: relative;        // Relative positioning
+$fixed: fixed;              // Fixed positioning
 
 // **Transitions**
 $theme-transition: all 0.3s ease; // Smooth transition for theme changes
 
 // **Cursor Styles**
-$pointer: pointer; // Pointer cursor (e.g., for links)
+$pointer: pointer;          // Pointer cursor (e.g., for links)
 
 // **Display and Layout**
-$flex: flex; // Display flex
-$block: block; // Display block
-$none: none; // Display none
-$inlineBlock: inline-block; // Display inline-block
-$alignCenter: center; // Align items center
-$justifyCenter: center; // Justify content center
-$justifyBetween: space-between; // Justify content space-between
-$column: column; // Flex direction column
+$flex: flex;                        // Display flex
+$block: block;                      // Display block
+$none: none;                        // Display none
+$inlineBlock: inline-block;         // Display inline-block
+$alignCenter: center;               // Align items center
+$justifyCenter: center;             // Justify content center
+$justifyBetween: space-between;     // Justify content space-between
+$column: column;                    // Flex direction column
 
 // **Border Radius**
-$border-radius: 0.25rem; // Default border radius
-$border-radius-sm: 0.2rem; // Small border radius
-$border-radius-lg: 0.3rem; // Large border radius
+$border-radius: 0.25rem;    // Default border radius
+$border-radius-sm: 0.2rem;  // Small border radius
+$border-radius-lg: 0.3rem;  // Large border radius
+
 
 // **Breakpoints for Responsive Design**
-$md: 767px; // Medium devices (tablets)
-$lg: 991px; // Large devices (small laptops)
-$xl: 1199px; // Extra large devices (desktops)
-$xxl: 1439px; // Double extra large devices
-$xxxl: 1599px; // Triple extra large devices
+$md: 767px;     // Medium devices (tablets)
+$lg: 991px;     // Large devices (small laptops)
+$xl: 1199px;    // Extra large devices (desktops)
+$xxl: 1439px;   // Double extra large devices
+$xxxl: 1599px;  // Triple extra large devices
 $xxxxl: 1700px; // Quadruple extra large devices
 
 $base-spacing: 1.5em;
