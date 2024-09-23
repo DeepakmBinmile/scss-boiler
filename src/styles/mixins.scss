@@ -1,0 +1,52 @@
+@import './variables.scss';
+
+@mixin d-flex1 {
+  display: $flex;
+  align-items: $alignCenter;
+  justify-content: $justifyCenter;
+}
+
+@mixin d-flex2 {
+  display: $flex;
+  align-items: $alignCenter;
+  justify-content: $justifyBetween;
+}
+
+@mixin d-flex3 {
+  display: $flex;
+  flex-direction: $column;
+  justify-content: $justifyBetween;
+}
+
+@mixin d-flex4 {
+  display: $flex;
+  align-items: $alignCenter;
+}
+
+@mixin button {
+  height: 44px;
+  line-height: 44px;
+  border-radius: $border-radius-sm;
+  color: #fff;
+  font-size: 16px;
+  background: $blue;
+  border-color: $blue;
+  padding: 0 $space20;
+  text-align: center;
+  box-shadow: none;
+  display: $inlineBlock;
+
+  &:not(:disabled):not(.disabled):active {
+    background: $blue;
+    border-color: $blue;
+    box-shadow: $none !important;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: $blue;
+    border-color: $blue;
+    color: $white;
+  }
+}
