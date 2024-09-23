@@ -1,35 +1,23 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo '🏗️👷 Styling, testing and building your project before committing so you"ll never miss errors'
+echo 'Running pre-commit checks: Formatting and linting your project.'
 
 # Check Prettier standards
-yarn run pretty ||
-(
-    echo '🤢🤮🤢🤮 ===================================== 🤢🤮🤢🤮
-            Prettier Check Failed. Run yarn run pretty, add changes and try commit again.';
-    false;
-)
-echo '✅✅✅✅ Code format Done. ✅✅✅✅'
-
-# Check ESLint Standards
-yarn run lint:fix ||
-(
-        echo '😤🏀👋😤 Get that weak code out of here! 😤🏀👋😤 
-                ESLint Check Failed. Make the required changes listed above, add changes and try to commit again.'
-        false; 
+yarn format || (
+  echo 'Prettier check failed. Please run `yarn format`, fix the issues, and try again.'
+  exit 1
 )
 
+echo 'Code formatting passed.'
 
+# Check ESLint standards
+yarn lint || (
+  echo 'ESLint check failed. Please fix the linting errors and try again.'
+  exit 1
+)
 
-# If everything passes... Now we can commit
-# echo '🤔🤔🤔🤔... Alright... Code looks good to me... Trying to build now. 🤔🤔🤔🤔'
-# yarn run build ||
-# (
-#     echo '❌👷🔨❌  😤😤😤😤😤... Because your build failed ❌👷🔨❌
-#             Next build failed: View the errors above to see why.'
-#     false;
-# )
+echo 'Code linting passed.'
 
-# If everything passes... Now we can commit
-echo '✅✅✅✅ You win this time... I am committing this now. ✅✅✅✅'
+# If everything passes, proceed with the commit
+echo 'All checks passed. Proceeding with the commit.'
