@@ -1,4 +1,4 @@
 export const RoutesConstants: Routes = {
-  HOME: '/home',
+  HOME: '/',
   DUMMY: '/dummyRoute',
 };
