@@ -1,5 +1,4 @@
 import debugLog from './Logger';
-import constants from './SessionConstants';
 
 const TAG = 'StorageUtils';
 
@@ -23,16 +22,6 @@ const getString = (key: string, defaultValue = '') => {
     debugLog(TAG, e);
   }
   return defaultValue;
-};
-
-const flush = () => {
-  try {
-    const rememberMe = getString(constants.REMEMBER_ME);
-    localStorage.clear();
-    setString(constants.REMEMBER_ME, rememberMe);
-  } catch (e) {
-    debugLog((e as Error).message);
-  }
 };
 
 const removeString = (key: string) => {
@@ -69,7 +58,6 @@ const getFromSessionStorage = (key: string) => {
 export default {
   setString,
   getString,
-  flush,
   removeString,
   storeInSessionStorage,
   getFromSessionStorage,
