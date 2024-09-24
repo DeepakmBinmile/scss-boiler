@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+
 import { RoutesConstants } from '../../routes/RoutesConstant';
 
 export const Home = () => {

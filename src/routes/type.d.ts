@@ -1,4 +1,4 @@
 interface Routes {
-    HOME: string;
-    DUMMY: string;
-  }
+  HOME: string;
+  DUMMY: string;
+}
