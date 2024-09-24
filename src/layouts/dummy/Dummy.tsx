@@ -7,7 +7,7 @@ export const Dummy = () => {
   return (
     <div>
       <div>
-        <button onClick={() => navigate(RoutesConstants.DUMMY)}>Home</button>
+        <button onClick={() => navigate(RoutesConstants.HOME)}>Home</button>
       </div>
     </div>
   );
