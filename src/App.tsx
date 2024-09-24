@@ -1,14 +1,14 @@
 import { Provider } from 'react-redux';
-
 import './App.scss';
+import { RouterProvider } from 'react-router-dom';
+
 import { store } from './redux/store/store';
+import { router } from './routes/router';
 
 function App() {
   return (
     <Provider store={store}>
-      <div className="loginOuter">
-        <h1>Hi check the scss here</h1>
-      </div>
+      <RouterProvider router={router} />
     </Provider>
   );
 }
