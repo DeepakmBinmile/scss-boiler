@@ -1,0 +1,78 @@
+// colors
+$background: var(--background);
+$foreground: var(--foreground);
+$card: var(--card);
+$card-foreground: var(--card-foreground);
+$popover: var(--popover);
+$popover-foreground: var(--popover-foreground);
+$primary: var(--primary);
+$primary-foreground: var(--primary-foreground);
+$secondary: var(--secondary);
+$secondary-foreground: var(--secondary-foreground);
+$muted: var(--muted);
+$muted-foreground: var(--muted-foreground);
+$accent: var(--accent);
+$accent-foreground: var(--accent-foreground);
+$destructive: var(--destructive);
+$destructive-foreground: var(--destructive-foreground);
+$border: var(--border);
+$input: var(--input);
+$ring: var(--ring);
+$radius-1: var(--radius-1);
+$chart-2: var(--chart-2);
+$chart-3: var(--chart-3);
+$chart-4: var(--chart-4);
+$chart-5: var(--chart-5);
+
+// Typography
+$font-family: 'Poppins', sans-serif;
+$font-size-base: 16px;
+$font-size-sm: 14px;
+$font-size-lg: 18px;
+$font-size-xl: 24px;
+$font-size-2xl: 32px;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+
+// Line Heights
+$line-height-base: 1.5;
+$line-height-sm: 1.25;
+$line-height-lg: 1.6;
+
+// Border Radius
+$border-radius-sm: 0.25rem; // 4px
+$border-radius-md: 0.5rem; // 8px
+$border-radius-lg: 1rem; // 16px
+$border-radius-full: 50%; // Circle
+
+// Shadows
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+$shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+$shadow-lg: 0 4px 8px rgba(0, 0, 0, 0.1);
+$shadow-xl: 0 8px 16px rgba(0, 0, 0, 0.1);
+$shadow-inset: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+
+// Spacing
+$spacing-xs: 0.25rem; // 4px
+$spacing-sm: 0.5rem; // 8px
+$spacing-md: 1rem; // 16px
+$spacing-lg: 1.5rem; // 24px
+$spacing-xl: 2rem; // 32px
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-medium: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Z-index
+$z-index-dropdown: 1000;
+$z-index-overlay: 2000;
+$z-index-modal: 3000;
+$z-index-tooltip: 4000;
+
+// Opacity
+$opacity-default: 1;
+$opacity-disabled: 0.6;
+$opacity-hover: 0.9;
