@@ -14,7 +14,7 @@ type ThemeProviderState = {
 };
 
 const initialState: ThemeProviderState = {
-  theme: 'dark',
+  theme: 'light',
   setTheme: () => null,
 };
 
@@ -22,7 +22,7 @@ export const ThemeProviderContext = createContext<ThemeProviderState>(initialSta
 
 export default function ThemeProvider({
   children,
-  defaultTheme = 'dark',
+  defaultTheme = 'light',
   storageKey = 'data-theme',
   ...props
 }: ThemeProviderProps) {

@@ -1,0 +1,15 @@
+@mixin padding-size($size) {
+  padding: $size;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin button-colors($bg-color, $hover-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  &:hover {
+    background-color: $hover-color;
+  }
+}

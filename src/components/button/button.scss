@@ -1,0 +1,54 @@
+@import '../../styles/variables.scss';
+@import '../../styles/mixins.scss';
+
+button {
+  all: unset; // Remove all default styles
+  display: inline-block; // Ensure proper box model for button
+  box-sizing: border-box; // Ensure padding and borders don't affect width
+  cursor: pointer; // Pointer cursor for clickable buttons
+  background: none; // Remove default background
+  border: none; // Remove default border
+  padding: 0; // Remove padding
+  margin: 0; // Remove margin
+  font: inherit; // Inherit font styles from parent
+  color: inherit; // Inherit text color
+  text-align: center; // Center text
+
+  &:focus {
+    outline: none; // Remove focus outline
+    box-shadow: none; // Remove box shadow from focus
+  }
+}
+
+
+
+.custom-button {
+  border-radius: $border-radius-md;
+  &.primary {
+    @include button-colors($primary, $primary-foreground, $foreground);
+  }
+  &.secondary {
+    @include button-colors($secondary, $secondary-foreground, $foreground);
+  }
+  &.small {
+    @include padding-size($spacing-xs);
+    @include font-size($font-size-sm);
+  }
+  &.medium {
+    @include padding-size($spacing-md);
+    @include font-size($font-size-base);
+  }
+  &.large {
+    @include padding-size($spacing-lg);
+    @include font-size($font-size-lg);
+  }
+  &.link {
+    background: none;
+    color: $accent;
+    padding: 0;
+    &:hover {
+      text-decoration: underline;
+      color: $accent-foreground;
+    }
+  }
+}
