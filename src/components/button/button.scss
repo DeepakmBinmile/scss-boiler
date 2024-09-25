@@ -1,5 +1,6 @@
 @import '../../styles/variables.scss';
 @import '../../styles/mixins.scss';
+@import '../../styles/theme';
 
 button {
   all: unset; // Remove all default styles
@@ -24,31 +25,33 @@ button {
 
 .custom-button {
   border-radius: $border-radius-md;
+
   &.primary {
-    @include button-colors($primary, $primary-foreground, $foreground);
+    @include button-colors($light-primary, $light-primary-foreground, $light-foreground);
   }
+
   &.secondary {
-    @include button-colors($secondary, $secondary-foreground, $foreground);
+    @include button-colors($light-secondary, $light-secondary-foreground, $light-foreground);
   }
+
   &.small {
-    @include padding-size($spacing-xs);
+    padding: $spacing-xs $spacing-sm;
     @include font-size($font-size-sm);
   }
+
   &.medium {
-    @include padding-size($spacing-md);
+    padding: $spacing-sm $spacing-md;
     @include font-size($font-size-base);
   }
+
   &.large {
-    @include padding-size($spacing-lg);
+    padding: $spacing-md $spacing-lg;
     @include font-size($font-size-lg);
   }
-  &.link {
-    background: none;
-    color: $accent;
-    padding: 0;
-    &:hover {
-      text-decoration: underline;
-      color: $accent-foreground;
-    }
+   .button-icon {
+    margin-right: $spacing-sm;
+    margin-top: $spacing-lg;
   }
+
+ 
 }
