@@ -39,11 +39,25 @@ button {
   }
 
   &.primary {
-    @include button-colors($light-primary, $light-primary-foreground, $light-foreground);
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    
+    
+    &:hover {
+      background-color: var(--primary-hover); 
+      color: var(--primary-foreground-hover); 
+    }
   }
 
   &.secondary {
-    @include button-colors($light-secondary, $light-secondary-foreground, $light-foreground);
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+    
+    
+    &:hover {
+      background-color: var(--secondary-hover);
+      color: var(--secondary-foreground-hover); 
+    }
   }
 
   &.small {
@@ -73,12 +87,13 @@ button {
     display: inline-block;
     width: 16px;
     height: 16px;
-    border: 2px solid $light-foreground;
+    border: 2px solid var(--foreground);
     border-radius: 50%;
     border-top: 2px solid transparent;
     animation: spin 1s linear infinite;
     margin-right: $spacing-sm;
   }
+
   &.icons {
     padding: 0;
     background: none;
@@ -96,8 +111,12 @@ button {
     .button-text {
       display: none;  
     }
+
+    &:hover {
+      background-color: var(--secondary-hover); 
+      color: var(--secondary-foreground-hover);
+    }
   }
-  
 }
 
 @keyframes spin {
@@ -107,6 +126,5 @@ button {
   100% {
     transform: rotate(360deg);
   }
-  
 }
 
