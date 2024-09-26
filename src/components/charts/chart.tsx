@@ -1,8 +1,7 @@
-'use client';
-
-import * as RechartsPrimitive from 'recharts';
 import './charts.scss';
+
 import { ComponentProps, createContext, forwardRef, useContext, useId, useMemo, CSSProperties } from 'react';
+import { Legend, ResponsiveContainer, Tooltip } from 'recharts';
 
 import {
   ChartConfig,
@@ -33,7 +32,7 @@ const ChartContainer = forwardRef<HTMLDivElement, ComponentProps<'div'> & ChartC
       <ChartContext.Provider value={{ config }}>
         <div data-chart={chartId} ref={ref} className={`chart-container ${className}`} {...props}>
           <ChartStyle id={chartId} config={config} />
-          <RechartsPrimitive.ResponsiveContainer>{children}</RechartsPrimitive.ResponsiveContainer>
+          <ResponsiveContainer>{children}</ResponsiveContainer>
         </div>
       </ChartContext.Provider>
     );
@@ -67,7 +66,7 @@ const ChartStyle = ({ id, config }: ChartStyleProps) => {
 };
 
 // ChartTooltip and ChartTooltipContent components
-const ChartTooltip = RechartsPrimitive.Tooltip;
+const ChartTooltip = Tooltip;
 
 const ChartTooltipContent = forwardRef<HTMLDivElement, ChartTooltipContentProps>(
   (
@@ -162,7 +161,7 @@ const ChartTooltipContent = forwardRef<HTMLDivElement, ChartTooltipContentProps>
 ChartTooltipContent.displayName = 'ChartTooltip';
 
 // ChartLegend and ChartLegendContent components
-const ChartLegend = RechartsPrimitive.Legend;
+const ChartLegend = Legend;
 
 const ChartLegendContent = forwardRef<HTMLDivElement, ChartLegendContentProps>(
   ({ className, hideIcon = false, payload, verticalAlign = 'bottom', nameKey }, ref) => {

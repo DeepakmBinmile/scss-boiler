@@ -1,5 +1,3 @@
-'use client';
-
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from 'recharts';
 
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '../chart';
@@ -19,15 +17,15 @@ const chartData = [
 const chartConfig: ChartConfig = {
   desktop: {
     label: 'Desktop',
-    color: 'hsl(var(--chart-1))',
+    color: ' var(--chart-1) ',
   },
   mobile: {
     label: 'Mobile',
-    color: 'hsl(var(--chart-2))',
+    color: ' var(--chart-2) ',
   },
 };
 
-export function RadarChartComponent() {
+export default function RadarChartComponent() {
   return (
     <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
       <RadarChart data={chartData}>

@@ -1,5 +1,3 @@
-'use client';
-
 import { LabelList, RadialBar, RadialBarChart } from 'recharts';
 
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '../chart';
@@ -21,27 +19,27 @@ const chartConfig: ChartConfig = {
   },
   chrome: {
     label: 'Chrome',
-    color: 'hsl(var(--chart-1))',
+    color: ' var(--chart-1) ',
   },
   safari: {
     label: 'Safari',
-    color: 'hsl(var(--chart-2))',
+    color: ' var(--chart-2) ',
   },
   firefox: {
     label: 'Firefox',
-    color: 'hsl(var(--chart-3))',
+    color: ' var(--chart-3) ',
   },
   edge: {
     label: 'Edge',
-    color: 'hsl(var(--chart-4))',
+    color: ' var(--chart-4) ',
   },
   other: {
     label: 'Other',
-    color: 'hsl(var(--chart-5))',
+    color: ' var(--chart-5) ',
   },
 };
 
-export function RadicalChartComponent() {
+export default function RadicalChartComponent() {
   return (
     <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
       <RadialBarChart data={chartData} startAngle={-90} endAngle={380} innerRadius={30} outerRadius={110}>

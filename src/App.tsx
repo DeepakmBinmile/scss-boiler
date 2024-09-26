@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import { store } from './redux/store/store';
 import ThemeProvider from './context/theme-provider';
 import { ModeToggle } from './components/theme-toggle/mode-toggle';
+import ChartsExample from './components/charts/example';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
       <Provider store={store}>
         <div>
           <ModeToggle />
-          <h1>Hi check the scss here</h1>
+          <ChartsExample />
         </div>
       </Provider>
     </ThemeProvider>

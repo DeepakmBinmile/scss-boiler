@@ -3,27 +3,26 @@
 .chart-container {
   display: flex;
   justify-content: center;
-  aspect-ratio: 16/9; // equivalent to aspect-video
-  font-size: 0.75rem; // equivalent to text-xs
+  aspect-ratio: 16 / 9;
+  font-size: 0.75rem;
 
-  // Custom recharts classes/styles
   &[data-chart] {
     .recharts-cartesian-axis-tick text {
-      fill: $muted-foreground;
+      fill: var(--muted-foreground);
     }
 
-    .recharts-cartesian-grid_line[stroke='#ccc'] {
-      stroke: $border, rgba(0, 0, 0, 0.5);
+    .recharts-cartesian-grid_line {
+      stroke: var(--border), rgba(0, 0, 0, 0.5);
     }
 
     .recharts-curve.recharts-tooltip-cursor,
     .recharts-rectangle.recharts-tooltip-cursor {
-      stroke: $border;
-      fill: $muted;
+      stroke: var(--border);
+      fill: var(--muted);
     }
 
-    .recharts-dot[stroke='#fff'],
-    .recharts-sector[stroke='#fff'] {
+    .recharts-dot,
+    .recharts-sector {
       stroke: transparent;
     }
 
@@ -33,13 +32,13 @@
       outline: none;
     }
 
-    .recharts-polar-grid_[stroke='#ccc'],
-    .recharts-reference-line_[stroke='#ccc'] {
-      stroke: $border;
+    .recharts-polar-grid_,
+    .recharts-reference-line_ {
+      stroke: var(--border);
     }
 
     .recharts-radial-bar-background-sector {
-      fill: $muted;
+      fill: var(--muted);
     }
   }
 }
@@ -48,27 +47,27 @@
   display: grid;
   min-width: 8rem;
   align-items: start;
-  gap: 0.375rem; // Equivalent to gap-1.5 in Tailwind
-  border-radius: 0.5rem; // Equivalent to rounded-lg in Tailwind
+  gap: 0.375rem;
+  border-radius: 0.5rem;
   border: 1px solid rgba($border, 0.5);
   background-color: $background;
-  padding: 0.375rem 0.625rem; // px-2.5 py-1.5 in Tailwind
-  font-size: 0.75rem; // Equivalent to text-xs in Tailwind
+  padding: 0.375rem 0.625rem;
+  font-size: 0.75rem;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
   .tooltip-content {
     display: grid;
-    gap: 0.375rem; // Equivalent to gap-1.5 in Tailwind
+    gap: 0.375rem;
 
     .tooltip-item {
       display: flex;
       flex-wrap: wrap;
       align-items: stretch;
-      gap: 0.5rem; // Equivalent to gap-2 in Tailwind
+      gap: 0.5rem;
 
       svg {
-        height: 0.625rem; // Equivalent to h-2.5 in Tailwind
-        width: 0.625rem; // Equivalent to w-2.5 in Tailwind
+        height: 0.625rem;
+        width: 0.625rem;
         color: $muted-foreground;
       }
 
@@ -83,12 +82,12 @@
         background-color: $background;
 
         &.dot {
-          height: 0.625rem; // Equivalent to h-2.5
-          width: 0.625rem; // Equivalent to w-2.5
+          height: 0.625rem;
+          width: 0.625rem;
         }
 
         &.line {
-          width: 0.25rem; // Equivalent to w-1
+          width: 0.25rem;
         }
 
         &.dashed {
@@ -97,7 +96,7 @@
           background-color: transparent;
 
           &.nested {
-            margin: 0.125rem 0; // Equivalent to my-0.5 in Tailwind
+            margin: 0.125rem 0;
           }
         }
       }
@@ -119,7 +118,7 @@
 
         .label-group {
           display: grid;
-          gap: 0.375rem; // Equivalent to gap-1.5
+          gap: 0.375rem;
         }
 
         .tooltip-label {
@@ -143,30 +142,30 @@
   gap: 1rem;
 
   &.top-align {
-    padding-bottom: 0.75rem; // Equivalent to pb-3 in Tailwind
+    padding-bottom: 0.75rem;
   }
 
   &.bottom-align {
-    padding-top: 0.75rem; // Equivalent to pt-3 in Tailwind
+    padding-top: 0.75rem;
   }
 
   .payload-item {
     display: flex;
     align-items: center;
-    gap: 0.375rem; // 1.5 * 0.25rem (Tailwind gap-1.5)
+    gap: 0.375rem;
 
     svg {
-      height: 0.75rem; // Tailwind h-3
-      width: 0.75rem; // Tailwind w-3
-      color: $muted-foreground; // Tailwind text-muted-foreground equivalent
+      height: 0.75rem;
+      width: 0.75rem;
+      color: $muted-foreground;
     }
 
     .box {
-      height: 0.5rem; // Tailwind h-2 equivalent
-      width: 0.5rem; // Tailwind w-2 equivalent
+      height: 0.5rem;
+      width: 0.5rem;
       flex-shrink: 0;
       border-radius: 2px;
-      background-color: inherit; // Dynamic background color
+      background-color: inherit;
     }
   }
 }

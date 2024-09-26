@@ -1,5 +1,3 @@
-'use client';
-
 import { Bar, BarChart, CartesianGrid, XAxis } from 'recharts';
 
 import { ChartContainer, ChartTooltip, ChartTooltipContent } from '../chart';
@@ -19,15 +17,15 @@ const chartData = [
 const chartConfig: ChartConfig = {
   desktop: {
     label: 'Desktop',
-    color: 'hsl(var(--chart-1))',
+    color: 'var(--chart-1)',
   },
   mobile: {
     label: 'Mobile',
-    color: 'hsl(var(--chart-2))',
+    color: 'var(--chart-2)',
   },
 };
 
-export function BarChartComponent() {
+export default function BarChartComponent() {
   return (
     <ChartContainer config={chartConfig}>
       <BarChart accessibilityLayer data={chartData}>
