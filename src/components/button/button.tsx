@@ -1,17 +1,18 @@
 import { forwardRef } from 'react';
 import './button.scss';
-
-export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'primary' | 'secondary';
-  size?: 'small' | 'medium' | 'large';
-  icon?: React.ReactNode;
-}
+import { ButtonProps } from './types';
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ variant = 'primary', size = 'medium', icon, children, ...props }, ref) => (
-    <button ref={ref} className={`custom-button ${variant} ${size}`} {...props}>
+  ({ variant = 'primary', size = 'medium', icon, children, loading, ...props }, ref) => (
+    <button 
+      ref={ref} 
+      className={`custom-button ${variant} ${size} ${loading ? 'loading' : ''}`} 
+      disabled={loading} 
+      {...props}
+    >
+      {loading && <span className="button-loader"></span>}
       {icon && <span className="button-icon">{icon}</span>}
-      {children}
+      {variant !== 'icons' && <span className="button-text">{children}</span>}
     </button>
   )
 );
@@ -19,6 +20,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 Button.displayName = 'Button';
 
 export default Button;
+
 
 
 

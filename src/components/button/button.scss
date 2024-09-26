@@ -3,28 +3,40 @@
 @import '../../styles/theme';
 
 button {
-  all: unset; // Remove all default styles
-  display: inline-block; // Ensure proper box model for button
-  box-sizing: border-box; // Ensure padding and borders don't affect width
-  cursor: pointer; // Pointer cursor for clickable buttons
-  background: none; // Remove default background
-  border: none; // Remove default border
-  padding: 0; // Remove padding
-  margin: 0; // Remove margin
-  font: inherit; // Inherit font styles from parent
-  color: inherit; // Inherit text color
-  text-align: center; // Center text
+  all: unset;
+  display: inline-block;
+  box-sizing: border-box;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  text-align: center;
 
   &:focus {
-    outline: none; // Remove focus outline
-    box-shadow: none; // Remove box shadow from focus
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed; 
   }
 }
 
-
-
 .custom-button {
-  border-radius: $border-radius-md;
+  border-radius: $border-radius-xl;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  gap: $spacing-sm;
+  cursor: pointer;
+
+  &.loading {
+    cursor: not-allowed; 
+  }
 
   &.primary {
     @include button-colors($light-primary, $light-primary-foreground, $light-foreground);
@@ -48,10 +60,53 @@ button {
     padding: $spacing-md $spacing-lg;
     @include font-size($font-size-lg);
   }
-   .button-icon {
+
+  .button-icon {
     margin-right: $spacing-sm;
-    margin-top: $spacing-lg;
   }
 
- 
+  .button-text {
+    margin-left: $spacing-sm;
+  }
+
+  .button-loader {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid $light-foreground;
+    border-radius: 50%;
+    border-top: 2px solid transparent;
+    animation: spin 1s linear infinite;
+    margin-right: $spacing-sm;
+  }
+  &.icons {
+    padding: 0;
+    background: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: $spacing-xs;
+
+    .button-icon {
+      margin-right: 0;
+      width: 24px;  
+      height: 24px;
+    }
+
+    .button-text {
+      display: none;  
+    }
+  }
+  
 }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+  
+}
+
