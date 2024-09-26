@@ -1,19 +1,11 @@
-import { Provider } from 'react-redux';
-
-import { store } from './redux/store/store';
-import ThemeProvider from './context/theme-provider';
-import { ModeToggle } from './components/theme-toggle/mode-toggle';
+import MyForm from "./components/myForm";
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark">
-      <Provider store={store}>
-        <div>
-          <ModeToggle />
-          <h1>Hi check the scss here</h1>
-        </div>
-      </Provider>
-    </ThemeProvider>
+    <div className="App">
+      <h1>My Form</h1>
+      <MyForm />  
+    </div>
   );
 }
 
