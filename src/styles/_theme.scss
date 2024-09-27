@@ -81,6 +81,7 @@ $dark-chart-5: #e59dc4; // Light Pink
   }
 
   html[data-theme='dark'] {
+    
     --background: #{$dark-background};
     --foreground: #{$dark-foreground};
     --card: #{$dark-card};

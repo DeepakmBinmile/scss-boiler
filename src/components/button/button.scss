@@ -26,7 +26,9 @@ button {
 }
 
 .custom-button {
-  border-radius: $border-radius-xl;
+  @include padding-size($spacing-sm); 
+  @include font-size($font-size-base);
+  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -34,91 +36,73 @@ button {
   gap: $spacing-sm;
   cursor: pointer;
 
+  &.box-shadow-none {
+    @include box-shadow('none');
+  }
+
+  &.box-shadow-xs {
+    @include box-shadow('xs');
+  }
+
+  &.box-shadow-md {
+    @include box-shadow('md');
+  }
+
+  &.box-shadow-lg {
+    @include box-shadow('lg');
+  }
+
+  &.box-shadow-xl {
+    @include box-shadow('xl');
+  }
+
+  &.border-radius-none {
+    @include border-radius('none');
+  }
+
+  &.border-radius-sm {
+    @include border-radius('sm');
+  }
+
+  &.border-radius-md {
+    @include border-radius('md');
+  }
+
+  &.border-radius-lg {
+    @include border-radius('lg');
+  }
+
+  &.border-radius-full {
+    @include border-radius('full');
+  }
+  
   &.loading {
-    cursor: not-allowed; 
+    cursor: not-allowed;
   }
 
   &.primary {
-    background-color: var(--primary);
-    color: var(--primary-foreground);
-    
-    
-    &:hover {
-      background-color: var(--primary-hover); 
-      color: var(--primary-foreground-hover); 
-    }
+    @include button-colors($primary,var(--primary-hover), $primary-foreground);
   }
 
   &.secondary {
-    background-color: var(--secondary);
-    color: var(--secondary-foreground);
-    
-    
-    &:hover {
-      background-color: var(--secondary-hover);
-      color: var(--secondary-foreground-hover); 
-    }
+    @include button-colors($secondary, var(--secondary-hover),$secondary-foreground);
   }
 
-  &.small {
-    padding: $spacing-xs $spacing-sm;
-    @include font-size($font-size-sm);
-  }
-
-  &.medium {
-    padding: $spacing-sm $spacing-md;
-    @include font-size($font-size-base);
-  }
-
-  &.large {
-    padding: $spacing-md $spacing-lg;
-    @include font-size($font-size-lg);
-  }
-
-  .button-icon {
-    margin-right: $spacing-sm;
-  }
-
-  .button-text {
-    margin-left: $spacing-sm;
+  &:focus {
+    outline: $border-width-base solid $foreground; 
+    outline-offset: $offset-base; 
   }
 
   .button-loader {
     display: inline-block;
-    width: 16px;
-    height: 16px;
-    border: 2px solid var(--foreground);
-    border-radius: 50%;
-    border-top: 2px solid transparent;
+    width: $width-base;
+    height: $height-base;
+    border: $border-width-base solid $foreground;
+    border-radius: $border-radius-full;
+    border-top: $border-width-base solid transparent;
     animation: spin 1s linear infinite;
-    margin-right: $spacing-sm;
-  }
-
-  &.icons {
-    padding: 0;
-    background: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: $spacing-xs;
-
-    .button-icon {
-      margin-right: 0;
-      width: 24px;  
-      height: 24px;
-    }
-
-    .button-text {
-      display: none;  
-    }
-
-    &:hover {
-      background-color: var(--secondary-hover); 
-      color: var(--secondary-foreground-hover);
-    }
   }
 }
-
 @keyframes spin {
   0% {
     transform: rotate(0deg);
@@ -127,4 +111,3 @@ button {
     transform: rotate(360deg);
   }
 }
-

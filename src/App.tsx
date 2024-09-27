@@ -9,11 +9,12 @@ function App() {
     <div >
       <h1>This is a default Button </h1>
       <h4>Default Button with primary variant and medium size </h4>
-      <Button >Default Button  </Button>
+      <Button   boxShadow="lg" 
+  borderRadius="lg">Default Button  </Button>
      
       <h1>This is a default Button </h1>
       <h4>Default Button with Secondary variant with medium size</h4>
-      <Button  variant='secondary' >Default Button  </Button>
+      <Button boxShadow='md' borderRadius='lg' variant='secondary' >Default Button  </Button>
     
 
   <h1>Small size button</h1>
