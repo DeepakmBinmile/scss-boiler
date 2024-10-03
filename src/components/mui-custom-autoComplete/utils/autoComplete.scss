@@ -1,0 +1,106 @@
+  @import '../../../styles/variables';
+  
+  $secondary-color: #555;
+  $border-color: #ccc;
+  $hover-border-color: #888;
+  $focus-border-color: #0073e6;
+  $chip-bg-color: #f0f0f0;
+  $chip-text-color: #333;
+  $icon-hover-color: #ff0000;
+  $input-text-color: #000;
+  $clear-button-hover-bg: #eee;
+  $clear-icon-color: #999;
+  $clear-icon-hover-color: #333;
+  
+
+  .MuiAutocomplete-popper {
+    .MuiAutocomplete-loading {
+      .MuiSkeleton-root {
+        margin-bottom: 8px;
+      }
+    }
+  }
+.MuiStack-root {
+    // You can add spacing, alignment, or layout adjustments for the container
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  
+    .MuiAutocomplete-root {
+      position: relative;
+      background: $primary;
+  
+      .MuiFormControl-root {
+        width: 100%;
+  
+        .MuiInputLabel-root {
+          font-size: 16px;
+          color: $primary-foreground;
+          transition: all 0.3s ease;
+  
+          &.MuiInputLabel-shrink {
+            font-size: $font-size-base;
+            color: $primary-foreground;
+          }
+        }
+  
+        .MuiInputBase-root {
+          padding: 8px;
+          display: flex;
+          align-items: center;
+  
+          &:hover {
+            border-bottom-color: $icon-hover-color;
+          }
+  
+          .MuiChip-root {
+            background-color: $chip-bg-color;
+            color: $chip-text-color;
+            margin-right: 8px;
+            padding: 4px;
+  
+            .MuiChip-label {
+              font-size: 14px;
+            }
+  
+            .MuiSvgIcon-root {
+              cursor: pointer;
+              &:hover {
+                fill: $icon-hover-color;
+              }
+            }
+          }
+  
+          .MuiInputBase-input {
+            font-size: 16px;
+            padding: 8px;
+            flex: 1;
+            color: $input-text-color;
+  
+            &:focus {
+              outline: none;
+              border-bottom-color: $focus-border-color;
+            }
+          }
+  
+          .MuiAutocomplete-endAdornment {
+            .MuiIconButton-root {
+              padding: 0;
+              &:hover {
+                background-color: $clear-button-hover-bg;
+              }
+  
+              .MuiSvgIcon-root {
+                color: $clear-icon-color;
+  
+                &:hover {
+                  color: $clear-icon-hover-color;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
