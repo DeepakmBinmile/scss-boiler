@@ -7,7 +7,7 @@
     "skipLibCheck": true,
 
     /* Module Resolution */
-    "moduleResolution": "node",  // Changed from 'bundler' to 'node'
+    "moduleResolution": "node", // Changed from 'bundler' to 'node'
     "isolatedModules": true,
     "moduleDetection": "force",
     "noEmit": true,
