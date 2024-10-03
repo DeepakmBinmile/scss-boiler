@@ -1,0 +1,62 @@
+@import '../../styles/variables.scss';
+
+
+$breadcrumb-item-padding: 0.375rem;
+$breadcrumb-ellipsis-size: 1rem;
+$breadcrumb-separator-icon-size: 1.5rem;
+
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  font-size: 0.875rem;
+  color: $primary-foreground;
+  list-style: none;
+}
+
+.breadcrumb-item {
+  display: inline-flex;
+  align-items: center;
+  padding: $breadcrumb-item-padding;
+}
+
+.breadcrumb-link {
+  color: $secondary-foreground;
+  transition: color 0.3s ease;
+  text-decoration: none;
+  &:hover {
+    color: $primary;
+  }
+}
+
+.breadcrumb-page {
+  font-weight: normal;
+  color: $primary;
+}
+
+.breadcrumb-separator {
+  svg {
+    height: 0.05rem;
+    width: 0.05rem;
+    color: $secondary-foreground;
+    width: $breadcrumb-separator-icon-size;
+    height: $breadcrumb-separator-icon-size;
+  }
+}
+
+.breadcrumb-ellipsis {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $breadcrumb-ellipsis-size;
+  height: $breadcrumb-ellipsis-size;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .sr-only {
+    display: none;
+  }
+}
