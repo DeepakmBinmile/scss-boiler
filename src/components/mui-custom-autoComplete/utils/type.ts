@@ -1,14 +1,12 @@
-import { AutocompleteProps } from "@mui/material";
-import { Dispatch } from "react";
+import { AutocompleteProps } from '@mui/material';
+import { Dispatch } from 'react';
 
 export type OptionsType = {
   id: number;
   label: string;
 };
 
-export type OptionValueType =
-  string | OptionsType | (string | OptionsType)[] | null
-
+export type OptionValueType = string | OptionsType | (string | OptionsType)[] | null;
 
 export type MuiAutocompleteProps = {
   options: OptionsType[];
@@ -20,11 +18,6 @@ export type MuiAutocompleteProps = {
   helperText?: string;
   fixedOptions?: OptionsType[];
   disabledOptions?: OptionsType[];
-  value: (OptionValueType);
-  setValue: Dispatch<
-    React.SetStateAction<OptionValueType>
-  >;
-} & Omit<
-  AutocompleteProps<OptionsType, boolean, boolean, boolean>,
-  "renderInput"
->;
+  value: OptionValueType;
+  setValue: Dispatch<React.SetStateAction<OptionValueType>>;
+} & Omit<AutocompleteProps<OptionsType, boolean, boolean, boolean>, 'renderInput'>;

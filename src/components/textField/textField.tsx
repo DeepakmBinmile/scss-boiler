@@ -13,11 +13,7 @@ const TextField: React.FC<TextFieldProps> = ({ label, customSize = 'medium', err
       )}
       <div className="textfield-input-container">
         {icon && <span className="textfield-icon">{icon}</span>}
-        <input
-          className={`textfield-input ${error ? 'textfield-input--error' : ''}`}
-          required={required}
-          {...props}
-        />
+        <input className={`textfield-input ${error ? 'textfield-input--error' : ''}`} required={required} {...props} />
       </div>
       {error && <span className="textfield-error">{error}</span>}
     </div>
@@ -25,4 +21,3 @@ const TextField: React.FC<TextFieldProps> = ({ label, customSize = 'medium', err
 };
 
 export default TextField;
-

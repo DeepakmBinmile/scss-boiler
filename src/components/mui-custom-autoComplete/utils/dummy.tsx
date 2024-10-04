@@ -98,5 +98,5 @@ export const top100Films = [
   { id: 97, label: 'Inglourious Basterds' },
   { id: 98, label: 'Snatch' },
   { id: 99, label: '3 Idiots' },
-  { id: 100, label: 'Monty Python and the Holy Grail' }
+  { id: 100, label: 'Monty Python and the Holy Grail' },
 ];

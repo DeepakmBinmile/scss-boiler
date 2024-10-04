@@ -3,6 +3,6 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   size?: 'small' | 'medium' | 'large';
   icon?: React.ReactNode;
   loading?: boolean;
-  boxShadow?: 'none' | 'xs' | 'md' | 'lg' | 'xl'; 
-  borderRadius?: 'none' | 'sm' | 'md' | 'lg' | 'full'; 
+  boxShadow?: 'none' | 'xs' | 'md' | 'lg' | 'xl';
+  borderRadius?: 'none' | 'sm' | 'md' | 'lg' | 'full';
 }

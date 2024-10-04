@@ -1,7 +1,5 @@
-
 @mixin textfield-size($padding, $font-size, $width) {
-    padding: $padding;
-    font-size: $font-size;
-    width: $width; 
-  }
-  
+  padding: $padding;
+  font-size: $font-size;
+  width: $width;
+}

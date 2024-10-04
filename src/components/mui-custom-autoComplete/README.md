@@ -10,24 +10,23 @@ Ensure you have the necessary dependencies installed:
 npm install @mui/material @emotion/react @emotion/styled react-window
 ```
 
-###  Usage
+### Usage
 
 Prop Table
-| Prop              | Type                                   | Default Value                       | Description                                                                                                  |
+| Prop | Type | Default Value | Description |
 |-------------------|----------------------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------------|
-| `options`         | `Array<string | OptionsType>`          | `[]`                               | The list of options to display in the autocomplete dropdown.                                                 |
-| `label`           | `string`                               | `""`                               | The label for the input field.                                                                                |
-| `placeholder`     | `string`                               | `""`                               | The placeholder text for the input field.                                                                     |
-| `error`           | `boolean`                              | `false`                            | If true, the input field will display an error state.                                                        |
-| `helperText`      | `string`                               | `"hello"`                          | Text to display below the input field when in an error state. Defaults to "hello".                          |
-| `fixedOptions`    | `Array<string | OptionsType>`          | `[]`                               | Options that are always available, regardless of the user's input.                                          |
-| `defaultOptions`  | `Array<string | OptionsType>`          | `[]`                               | Default selected options.                                                                                     |
-| `disabledOptions` | `Array<string | OptionsType>`          | `[]`                               | Options that should be disabled and not selectable.                                                           |
-| `multiple`        | `boolean`                              | `false`                            | If true, the component supports multiple selections.                                                          |
-| `value`           | `string | Array<string | OptionsType>` | `[]` (for multiple) or `null` (for single) | The current selected value(s).                                                                                |
-| `setValue`        | `(value: string | Array<string | OptionsType>) => void` | `null` | Function to set the selected value(s).                                                                        |
-| `...rest`         | `any`                                  | -                                   | Any additional props to pass to the underlying `Autocomplete` component.                                     |
-
+| `options` | `Array<string | OptionsType>` | `[]` | The list of options to display in the autocomplete dropdown. |
+| `label` | `string` | `""` | The label for the input field. |
+| `placeholder` | `string` | `""` | The placeholder text for the input field. |
+| `error` | `boolean` | `false` | If true, the input field will display an error state. |
+| `helperText` | `string` | `"hello"` | Text to display below the input field when in an error state. Defaults to "hello". |
+| `fixedOptions` | `Array<string | OptionsType>` | `[]` | Options that are always available, regardless of the user's input. |
+| `defaultOptions` | `Array<string | OptionsType>` | `[]` | Default selected options. |
+| `disabledOptions` | `Array<string | OptionsType>` | `[]` | Options that should be disabled and not selectable. |
+| `multiple` | `boolean` | `false` | If true, the component supports multiple selections. |
+| `value` | `string | Array<string | OptionsType>` | `[]` (for multiple) or `null` (for single) | The current selected value(s). |
+| `setValue` | `(value: string | Array<string | OptionsType>) => void` | `null` | Function to set the selected value(s). |
+| `...rest` | `any` | - | Any additional props to pass to the underlying `Autocomplete` component. |
 
 ## Example of Using `MuiAutocomplete` in a React Component
 
@@ -39,7 +38,7 @@ export default function Home() {
  const top100Films = [
   { id: 1, label: 'The Shawshank Redemption' },
   { id: 2, label: 'The Godfather' },
-  { id: 3, label: 'The Godfather: Part II' }, 
+  { id: 3, label: 'The Godfather: Part II' },
  ]
   const [data, setData] = useState<OptionsType[]>([]); // Initial data state
   const [isLoading, setIsLoading] = useState<boolean>(true); // Loading state
@@ -64,11 +63,11 @@ export default function Home() {
   const defaultOptions = useMemo(() => {
     return data?.length > 0 ? data.filter(({id}) => id === 2) : undefined
   }, [data])
-  
+
   const disabledOptions = useMemo(() => {
     return data?.length > 0 ? data.filter(({id}) => id === 3) : undefined
   }, [data])
-  
+
 
   return (
     <div>

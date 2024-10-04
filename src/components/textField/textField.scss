@@ -12,10 +12,9 @@
     font-weight: $font-weight-semibold;
     margin-bottom: $spacing-xs;
     color: $dark-card;
-    
-   
+
     .textfield-required {
-      color: $light-destructive; 
+      color: $light-destructive;
       margin-left: $spacing-xs;
       font-size: $font-size-sm;
       font-weight: $font-weight-medium;
@@ -34,9 +33,9 @@
   }
 
   .textfield-input--error {
-    border-color: $light-destructive; 
+    border-color: $light-destructive;
   }
-  
+
   .textfield-error {
     color: $light-destructive;
     font-size: $font-size-sm;
@@ -44,16 +43,14 @@
   }
 
   &--small .textfield-input {
-    @include textfield-size($spacing-xs $spacing-sm, $spacing-md, 150px); 
+    @include textfield-size($spacing-xs $spacing-sm, $spacing-md, 150px);
   }
 
   &--medium .textfield-input {
-    @include textfield-size($spacing-sm $spacing-md, $spacing-lg, 300px); 
+    @include textfield-size($spacing-sm $spacing-md, $spacing-lg, 300px);
   }
 
   &--large .textfield-input {
     @include textfield-size($spacing-md $spacing-lg, $spacing-xl, 500px);
   }
 }
-
-  

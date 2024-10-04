@@ -21,14 +21,14 @@ button {
   }
 
   &:disabled {
-    cursor: not-allowed; 
+    cursor: not-allowed;
   }
 }
 
 .custom-button {
-  @include padding-size($spacing-sm); 
+  @include padding-size($spacing-sm);
   @include font-size($font-size-base);
-  
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -75,22 +75,22 @@ button {
   &.border-radius-full {
     @include border-radius('full');
   }
-  
+
   &.loading {
     cursor: not-allowed;
   }
 
   &.primary {
-    @include button-colors($primary,var(--primary-hover), $primary-foreground);
+    @include button-colors($primary, var(--primary-hover), $primary-foreground);
   }
 
   &.secondary {
-    @include button-colors($secondary, var(--secondary-hover),$secondary-foreground);
+    @include button-colors($secondary, var(--secondary-hover), $secondary-foreground);
   }
 
   &:focus {
-    outline: $border-width-base solid $foreground; 
-    outline-offset: $offset-base; 
+    outline: $border-width-base solid $foreground;
+    outline-offset: $offset-base;
   }
 
   .button-loader {
