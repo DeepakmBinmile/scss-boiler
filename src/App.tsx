@@ -9,6 +9,7 @@ import ThemeProvider from './context/theme-provider';
 import { store } from './redux/store/store';
 import { ModeToggle } from './components/theme-toggle/mode-toggle';
 import ExampleAutoComplete from './components/mui-custom-autoComplete/ExampleAutoComplete';
+import ChartsExample from './components/charts/example';
 
 function App() {
   const [loading] = useState(true);
@@ -72,6 +73,7 @@ function App() {
             </Button>
           </div>
           <ExampleAutoComplete />
+          <ChartsExample />
         </div>
       </Provider>
     </ThemeProvider>

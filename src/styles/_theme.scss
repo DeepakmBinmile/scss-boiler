@@ -26,6 +26,7 @@ $light-chart-4: hsl(210, 98%, 78%);
 $light-chart-5: hsl(212, 97%, 87%);
 $light-radius: 1rem;
 
+
 // Dark Theme Colors
 $dark-background: hsl(240, 10%, 3.9%);
 $dark-foreground: hsl(0, 0%, 98%);
@@ -53,6 +54,7 @@ $dark-chart-3: hsl(216, 92%, 60%);
 $dark-chart-4: hsl(210, 98%, 78%);
 $dark-chart-5: hsl(212, 97%, 87%);
 $light-radius: 1rem;
+
 
 @layer base {
   html[data-theme='light'] {
