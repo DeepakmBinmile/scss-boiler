@@ -60,7 +60,7 @@ const MuiAutocomplete = ({
     <TextField
       error={error}
       {...params}
-      variant="standard"
+      variant="outlined"
       label={label || ''}
       placeholder={placeholder ?? ''}
       helperText={error ? helperText : undefined}
