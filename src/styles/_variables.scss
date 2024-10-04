@@ -18,7 +18,7 @@ $destructive-foreground: var(--destructive-foreground);
 $border: var(--border);
 $input: var(--input);
 $ring: var(--ring);
-$radius-1: var(--radius-1);
+
 $chart-2: var(--chart-2);
 $chart-3: var(--chart-3);
 $chart-4: var(--chart-4);
@@ -26,6 +26,7 @@ $chart-5: var(--chart-5);
 
 // Typography
 $font-family: 'Poppins', sans-serif;
+$font-size-xs: 16px;
 $font-size-base: 16px;
 $font-size-sm: 14px;
 $font-size-lg: 18px;
@@ -42,9 +43,11 @@ $line-height-sm: 1.25;
 $line-height-lg: 1.6;
 
 // Border Radius
+$border-radius-none:0;
 $border-radius-sm: 0.25rem; // 4px
 $border-radius-md: 0.5rem; // 8px
 $border-radius-lg: 1rem; // 16px
+$border-radius-xl:2rem;// 32px
 $border-radius-full: 50%; // Circle
 
 // Shadows
@@ -76,3 +79,18 @@ $z-index-tooltip: 4000;
 $opacity-default: 1;
 $opacity-disabled: 0.6;
 $opacity-hover: 0.9;
+
+//Width
+$width-base: 16px;
+$width-xs:24px;
+
+
+//Height
+$height-base:16px;
+$height-xs:24px;
+
+//BorderWidth
+$border-width-base:2px;
+
+//Offset
+$offset-base:2px;

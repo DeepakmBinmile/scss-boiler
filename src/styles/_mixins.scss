@@ -1,0 +1,42 @@
+@import './variables';
+@mixin padding-size($size) {
+  padding: $size;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+}
+
+@mixin button-colors($bg-color, $hover-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  &:hover {
+    background-color: $hover-color;
+  }
+}
+@mixin box-shadow($size) {
+  @if $size == 'none' {
+    box-shadow: none;
+  } @else if $size == 'xs' {
+    box-shadow: $shadow-sm;
+  } @else if $size == 'md' {
+    box-shadow: $shadow-md;
+  } @else if $size == 'lg' {
+    box-shadow: $shadow-lg;
+  } @else if $size == 'xl' {
+    box-shadow: $shadow-xl;
+  }
+}
+@mixin border-radius($size) {
+  @if $size == 'none' {
+    border-radius: $border-radius-none;
+  } @else if $size == 'sm' {
+    border-radius: $border-radius-sm;
+  } @else if $size == 'md' {
+    border-radius: $border-radius-md;
+  } @else if $size == 'lg' {
+    border-radius: $border-radius-lg;
+  } @else if $size == 'full' {
+    border-radius: $border-radius-full;
+  }
+}
