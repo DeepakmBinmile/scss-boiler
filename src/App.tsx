@@ -8,6 +8,7 @@ import UserIcon from './assets/imagesData/UserIcon';
 import ThemeProvider from './context/theme-provider';
 import { store } from './redux/store/store';
 import { ModeToggle } from './components/theme-toggle/mode-toggle';
+import ExampleAutoComplete from './components/mui-custom-autoComplete/ExampleAutoComplete';
 
 function App() {
   const [loading] = useState(true);
@@ -70,6 +71,7 @@ function App() {
               Submit
             </Button>
           </div>
+          <ExampleAutoComplete />
         </div>
       </Provider>
     </ThemeProvider>
