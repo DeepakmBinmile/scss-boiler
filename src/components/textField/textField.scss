@@ -1,0 +1,56 @@
+@import '../../styles/mixin';
+@import '../../styles/theme';
+@import '../../styles/variables';
+
+.custom-textfield {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $spacing-lg;
+
+  .textfield-label {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-semibold;
+    margin-bottom: $spacing-xs;
+    color: $dark-card;
+
+    .textfield-required {
+      color: $light-destructive;
+      margin-left: $spacing-xs;
+      font-size: $font-size-sm;
+      font-weight: $font-weight-medium;
+    }
+  }
+
+  .textfield-input {
+    @include textfield-size($spacing-xs $spacing-sm, $spacing-md, 300px);
+    border: 2px solid $light-border;
+    border-radius: $border-radius-sm;
+
+    &:focus {
+      border-color: $light-ring;
+      outline: none;
+    }
+  }
+
+  .textfield-input--error {
+    border-color: $light-destructive;
+  }
+
+  .textfield-error {
+    color: $light-destructive;
+    font-size: $font-size-sm;
+    margin-top: $spacing-xs;
+  }
+
+  &--small .textfield-input {
+    @include textfield-size($spacing-xs $spacing-sm, $spacing-md, 150px);
+  }
+
+  &--medium .textfield-input {
+    @include textfield-size($spacing-sm $spacing-md, $spacing-lg, 300px);
+  }
+
+  &--large .textfield-input {
+    @include textfield-size($spacing-md $spacing-lg, $spacing-xl, 500px);
+  }
+}

@@ -1,55 +1,60 @@
 // Light Theme Colors
-$light-background: #ffffff; // White
-$light-foreground: #3a3a3a; // Dark Gray
-$light-card: #ffffff; // White
-$light-card-foreground: #3a3a3a; // Dark Gray
-$light-popover: #ffffff; // White
-$light-popover-foreground: #3a3a3a; // Dark Gray
-$light-primary: #3578e5; // Blue
-$light-primary-foreground: #d1d1d1; // Light Gray
-$light-secondary: #f5f5f5; // Light Gray
-$light-secondary-foreground: #3a3a3a; // Dark Gray
-$light-muted: #f5f5f5; // Light Gray
-$light-muted-foreground: #4b4b4b; // Darker Gray
-$light-accent: #f5f5f5; // Light Gray
-$light-accent-foreground: #3a3a3a; // Dark Gray
-$light-destructive: #ff3b30; // Red
-$light-destructive-foreground: #d1d1d1; // Light Gray
-$light-border: #d6d6d6; // Light Gray
-$light-input: #d6d6d6; // Light Gray
-$light-ring: #3578e5; // Blue
+$light-background: hsl(0, 0%, 100%);
+$light-foreground: hsl(222.2, 84%, 4.9%);
+$light-card: hsl(0, 0%, 100%);
+$light-card-foreground: hsl(222.2, 84%, 4.9%);
+$light-popover: hsl(0, 0%, 100%);
+$light-popover-foreground: hsl(222.2, 84%, 4.9%);
+$light-primary: hsl(221.2, 83.2%, 53.3%);
+$light-primary-foreground: hsl(210, 40%, 98%);
+$light-secondary: hsl(210, 40%, 96.1%);
+$light-secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+$light-muted: hsl(210, 40%, 96.1%);
+$light-muted-foreground: hsl(215.4, 16.3%, 44%);
+$light-accent: hsl(210, 40%, 96.1%);
+$light-accent-foreground: hsl(222.2, 47.4%, 11.2%);
+$light-destructive: hsl(0, 72%, 51%);
+$light-destructive-foreground: hsl(210, 40%, 98%);
+$light-border: hsl(214.3, 31.8%, 91.4%);
+$light-border-focus: hsla(221, 83%, 53%, 0.702);
+$light-input: hsl(214.3, 31.8%, 91.4%);
+$light-ring: hsl(221.2, 83.2%, 53.3%);
+$light-chart-1: hsl(221.2, 83.2%, 53.3%);
+$light-chart-2: hsl(212, 95%, 68%);
+$light-chart-3: hsl(216, 92%, 60%);
+$light-chart-4: hsl(210, 98%, 78%);
+$light-chart-5: hsl(212, 97%, 87%);
 $light-radius: 1rem;
-$light-chart-1: #f0b084; // Light Orange
-$light-chart-2: #b1cfc3; // Light Teal
-$light-chart-3: #a5c2c8; // Light Blue
-$light-chart-4: #6f9d8e; // Light Green
-$light-chart-5: #e4d76c; // Light Yellow
+
 
 // Dark Theme Colors
-$dark-background: #3a3a3a; // Dark Gray
-$dark-foreground: #d1d1d1; // Light Gray
-$dark-card: #3a3a3a; // Dark Gray
-$dark-card-foreground: #d1d1d1; // Light Gray
-$dark-popover: #3a3a3a; // Dark Gray
-$dark-popover-foreground: #d1d1d1; // Light Gray
-$dark-primary: #e6d4c7; // Light Beige
-$dark-primary-foreground: #3a3a3a; // Dark Gray
-$dark-secondary: #353535; // Darker Gray
-$dark-secondary-foreground: #d1d1d1; // Light Gray
-$dark-muted: #353535; // Darker Gray
-$dark-muted-foreground: #a3a3a3; // Gray
-$dark-accent: #353535; // Darker Gray
-$dark-accent-foreground: #d1d1d1; // Light Gray
-$dark-destructive: #b33333; // Darker Red
-$dark-destructive-foreground: #d1d1d1; // Light Gray
-$dark-border: #353535; // Darker Gray
-$dark-input: #353535; // Darker Gray
-$dark-ring: #b0b0b0; // Gray
-$dark-chart-1: #b0c4d1; // Light Slate
-$dark-chart-2: #a5b4c1; // Slate Gray
-$dark-chart-3: #d9c9a2; // Light Tan
-$dark-chart-4: #9969b8; // Purple
-$dark-chart-5: #e59dc4; // Light Pink
+$dark-background: hsl(240, 10%, 3.9%);
+$dark-foreground: hsl(0, 0%, 98%);
+$dark-card: hsl(240, 10%, 3.9%);
+$dark-card-foreground: hsl(0, 0%, 98%);
+$dark-popover: hsl(240, 10%, 3.9%);
+$dark-popover-foreground: hsl(0, 0%, 98%);
+$dark-primary: hsl(221.2, 83.2%, 53.3%);
+$dark-primary-foreground: hsl(210, 40%, 98%);
+$dark-secondary: hsl(210, 40%, 96.1%);
+$dark-secondary-foreground: hsl(222.2, 47.4%, 11.2%);
+$dark-muted: hsl(240, 3.7%, 15.9%);
+$dark-muted-foreground: hsl(240, 5%, 64.9%);
+$dark-accent: hsl(240, 3.7%, 15.9%);
+$dark-accent-foreground: hsl(0, 0%, 98%);
+$dark-destructive: hsl(0, 72%, 51%);
+$dark-destructive-foreground: hsl(210, 40%, 98%);
+$dark-border: hsl(240, 3.7%, 15.9%);
+$dark-border-focus: hsl(221, 83%, 53%, 0.702);
+$dark-input: hsl(240, 3.7%, 15.9%);
+$dark-ring: hsl(221.2, 83.2%, 53.3%);
+$dark-chart-1: hsl(221.2, 83.2%, 53.3%);
+$dark-chart-2: hsl(212, 95%, 68%);
+$dark-chart-3: hsl(216, 92%, 60%);
+$dark-chart-4: hsl(210, 98%, 78%);
+$dark-chart-5: hsl(212, 97%, 87%);
+$light-radius: 1rem;
+
 
 @layer base {
   html[data-theme='light'] {
@@ -70,6 +75,7 @@ $dark-chart-5: #e59dc4; // Light Pink
     --destructive: #{$light-destructive};
     --destructive-foreground: #{$light-destructive-foreground};
     --border: #{$light-border};
+    --border-focus: #($light-border-focus);
     --input: #{$light-input};
     --ring: #{$light-ring};
     --radius: #{$light-radius};
@@ -81,7 +87,6 @@ $dark-chart-5: #e59dc4; // Light Pink
   }
 
   html[data-theme='dark'] {
-    
     --background: #{$dark-background};
     --foreground: #{$dark-foreground};
     --card: #{$dark-card};
@@ -99,6 +104,7 @@ $dark-chart-5: #e59dc4; // Light Pink
     --destructive: #{$dark-destructive};
     --destructive-foreground: #{$dark-destructive-foreground};
     --border: #{$dark-border};
+    --border-focus: #($dark-border-focus);
     --input: #{$dark-input};
     --ring: #{$dark-ring};
     --chart-1: #{$dark-chart-1};

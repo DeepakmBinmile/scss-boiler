@@ -16,9 +16,11 @@ $accent-foreground: var(--accent-foreground);
 $destructive: var(--destructive);
 $destructive-foreground: var(--destructive-foreground);
 $border: var(--border);
+$border-focus: var(--border-focus);
 $input: var(--input);
 $ring: var(--ring);
 
+$chart-1: var(--chart-1);
 $chart-2: var(--chart-2);
 $chart-3: var(--chart-3);
 $chart-4: var(--chart-4);
@@ -43,11 +45,11 @@ $line-height-sm: 1.25;
 $line-height-lg: 1.6;
 
 // Border Radius
-$border-radius-none:0;
+$border-radius-none: 0;
 $border-radius-sm: 0.25rem; // 4px
 $border-radius-md: 0.5rem; // 8px
 $border-radius-lg: 1rem; // 16px
-$border-radius-xl:2rem;// 32px
+$border-radius-xl: 2rem; // 32px
 $border-radius-full: 50%; // Circle
 
 // Shadows
@@ -82,15 +84,14 @@ $opacity-hover: 0.9;
 
 //Width
 $width-base: 16px;
-$width-xs:24px;
-
+$width-xs: 24px;
 
 //Height
-$height-base:16px;
-$height-xs:24px;
+$height-base: 16px;
+$height-xs: 24px;
 
 //BorderWidth
-$border-width-base:2px;
+$border-width-base: 2px;
 
 //Offset
-$offset-base:2px;
+$offset-base: 2px;
