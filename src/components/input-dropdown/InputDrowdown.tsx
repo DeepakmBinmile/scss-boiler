@@ -1,13 +1,10 @@
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import { FormControl, MenuItem, Select } from '@mui/material';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useId } from 'react';
 
 import { InputDropdownProps } from './type';
 
-export const InputDropdown: React.FC<InputDropdownProps> = ({
-  name,
-  options,
-}: InputDropdownProps) => {
+export const InputDropdown: React.FC<InputDropdownProps> = ({ name, options }: InputDropdownProps) => {
   const { control } = useFormContext();
   const id = useId();
 
