@@ -24,28 +24,12 @@ export default function ExampleForm() {
     console.log(values, 'values');
   };
 
+  
+
   return (
     <FormWrapper defaultValues={defaultValue} formSchema={userForm} onSubmitAction={handleSubmit}>
       <Stack gap={5}>
         <InputText name="name" placeholder="Enter your name" label="name" />
-        <InputDropdown
-          name="age"
-          label="Age"
-          options={[
-            { label: 'above 18', value: '18+' },
-            { label: 'below 18', value: '18-' },
-          ]}
-          placeholder="Select your age"
-        />
-        <InputRadio
-          name="gender"
-          label="Gender"
-          options={[
-            { label: 'Male', value: 'male' },
-            { label: 'Female', value: 'female' },
-          ]}
-        />
-        <Button type="submit">Submit</Button>
       </Stack>
     </FormWrapper>
   );
