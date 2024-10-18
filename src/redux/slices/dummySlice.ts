@@ -10,7 +10,7 @@ const dummySlice = createSlice({
   name: 'dummySlice',
   initialState,
   reducers: {
-    getTodo: state => ({
+    getTodo: (state) => ({
       ...state,
     }),
     gotToDo: (state, action: PayloadAction<string[]>) => ({

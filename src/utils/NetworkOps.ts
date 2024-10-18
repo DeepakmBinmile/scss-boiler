@@ -1,8 +1,10 @@
-import axios, { AxiosError, AxiosRequestHeaders, AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import axios, {
+  AxiosError, AxiosRequestHeaders, AxiosResponse, InternalAxiosRequestConfig,
+} from 'axios';
 
-import StorageUtils from './StorageUtils';
-import debugLog from './Logger';
-import constants from './SessionConstants';
+import StorageUtils from './StorageUtils.ts';
+import debugLog from './Logger.ts';
+import constants from './SessionConstants.ts';
 
 const TAG = 'NetworkOps: ';
 
@@ -68,7 +70,7 @@ instance.interceptors.response.use(
   (error: AxiosError) => {
     if (error?.response?.status === 403) {
       StorageUtils.removeString(constants.TOKEN);
-      controllers.forEach(controller => controller.abort());
+      controllers.forEach((controller) => controller.abort());
       controllers.length = 0;
       window.location.reload();
     }

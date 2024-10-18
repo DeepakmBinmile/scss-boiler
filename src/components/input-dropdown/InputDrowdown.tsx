@@ -1,8 +1,11 @@
-import { FormControl, InputLabel, MenuItem, Select } from '@mui/material';
+import {
+  FormControl, InputLabel, MenuItem, Select,
+} from '@mui/material';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useId } from 'react';
 
 import { InputDropdownProps } from './type';
+import * as React from 'react';
 
 export const InputDropdown: React.FC<InputDropdownProps> = ({
   name,
@@ -11,16 +14,13 @@ export const InputDropdown: React.FC<InputDropdownProps> = ({
   const { control } = useFormContext();
   const id = useId();
 
-  const generateSingleOptions = () => {
-    return options?.map(
-      option =>
-        option && (
+  const generateSingleOptions = () => options?.map(
+    (option) => option && (
           <MenuItem key={option?.value} value={option?.value}>
             {option?.label}
           </MenuItem>
-        ),
-    )
-  };
+    ),
+  );
 
   return (
     <FormControl key={id} size="small" fullWidth>

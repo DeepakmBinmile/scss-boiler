@@ -1,4 +1,6 @@
-import { FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
+import {
+  FormControl, FormControlLabel, FormLabel, Radio, RadioGroup,
+} from '@mui/material';
 import { useId } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 
@@ -8,10 +10,8 @@ export const InputRadio: React.FC<InputRadioProps> = ({ name, label, options }: 
   const { control } = useFormContext();
   const id = useId();
 
-  const generateRadioOptions = () => {
-    return options?.map(
-      singleOption =>
-        singleOption && (
+  const generateRadioOptions = () => options?.map(
+    (singleOption) => singleOption && (
           <FormControlLabel
             key={singleOption.value}
             value={singleOption.value}
@@ -19,9 +19,8 @@ export const InputRadio: React.FC<InputRadioProps> = ({ name, label, options }: 
             control={<Radio />}
             id={`${id}-${singleOption.value}`}
           />
-        ),
-    );
-  };
+    ),
+  );
 
   return (
     <FormControl component="fieldset" aria-labelledby={id} key={id}>

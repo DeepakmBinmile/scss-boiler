@@ -1,4 +1,4 @@
-import debugLog from './Logger';
+import debugLog from './Logger.ts';
 
 const TAG = 'StorageUtils';
 

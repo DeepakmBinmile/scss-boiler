@@ -10,8 +10,7 @@ async function fetchDataTodo() {
   return data;
 }
 
-export const dummyEpic = (action$: Observable<DummyActions>) =>
-  action$.pipe(
-    filter(getTodo.match),
-    mergeMap(() => from(fetchDataTodo()).pipe(map(data => gotToDo(data)))),
-  );
+export const dummyEpic = (action$: Observable<DummyActions>) => action$.pipe(
+  filter(getTodo.match),
+  mergeMap(() => from(fetchDataTodo()).pipe(map((data) => gotToDo(data)))),
+);
