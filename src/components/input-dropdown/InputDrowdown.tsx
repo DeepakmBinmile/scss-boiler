@@ -19,7 +19,7 @@ export const InputDropdown: React.FC<InputDropdownProps> = ({
             {option?.label}
           </MenuItem>
         ),
-    );
+    )
   };
 
   return (
