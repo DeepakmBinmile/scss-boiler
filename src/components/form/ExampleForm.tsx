@@ -6,6 +6,7 @@ import { InputDropdown } from '../input-dropdown/InputDrowdown';
 import { InputRadio } from '../input-radio/InputRadio';
 
 import { FormWrapper } from './Form-wrapper';
+import debugLog from '../../utils/Logger';
 
 export default function ExampleForm() {
   const userForm = z.object({
@@ -21,7 +22,7 @@ export default function ExampleForm() {
   };
 
   const handleSubmit = (values: z.infer<typeof userForm>) => {
-    console.log(values, 'values');
+    debugLog(values, 'values');
   };
 
   return (

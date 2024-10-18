@@ -12,11 +12,14 @@ const reducers = combineReducers({
 
 const initialState: RootState = reducers(undefined as any, { type: '@@INIT' });
 
-const resettableRootReducer: Reducer<RootState, any> = (state = initialState, action) => {
+const resettableRootReducer: Reducer<RootState, any> = (state, action) => {
+  const currentState = state || initialState;
+  
   if (action.type === 'store/reset') {
     return initialState;
   }
-  return reducers(state, action);
+  
+  return reducers(currentState, action);
 };
 
 export default resettableRootReducer;

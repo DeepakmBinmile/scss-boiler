@@ -1,5 +1,5 @@
 import {
-  FormControl, InputLabel, MenuItem, Select,
+  FormControl, MenuItem, Select,
 } from '@mui/material';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useId } from 'react';
