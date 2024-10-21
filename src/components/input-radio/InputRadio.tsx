@@ -1,10 +1,9 @@
+import { InputRadioProps } from './type';
 import {
   FormControl, FormControlLabel, FormLabel, Radio, RadioGroup,
 } from '@mui/material';
 import { useId } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
-
-import { InputRadioProps } from './type';
 
 export const InputRadio: React.FC<InputRadioProps> = ({ name, label, options }: InputRadioProps) => {
   const { control } = useFormContext();
@@ -16,7 +15,7 @@ export const InputRadio: React.FC<InputRadioProps> = ({ name, label, options }: 
             key={singleOption.value}
             value={singleOption.value}
             label={singleOption.label}
-            control={<Radio />}
+            control={<Radio/>}
             id={`${id}-${singleOption.value}`}
           />
     ),
@@ -27,6 +26,7 @@ export const InputRadio: React.FC<InputRadioProps> = ({ name, label, options }: 
       <FormLabel id={id} component="legend">
         {label}
       </FormLabel>
+
       <Controller
         name={name}
         control={control}

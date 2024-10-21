@@ -1,19 +1,19 @@
-import { createBrowserRouter } from 'react-router-dom';
 
 import { Dummy } from '../layouts/dummy/Dummy';
 import { Home } from '../layouts/home/Home';
+import { createBrowserRouter } from 'react-router-dom';
 
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />,
+    element: <Home/>,
   },
   {
     path: 'home',
-    element: <Home />,
+    element: <Home/>,
   },
   {
     path: 'dummyRoute',
-    element: <Dummy />,
+    element: <Dummy/>,
   },
 ]);

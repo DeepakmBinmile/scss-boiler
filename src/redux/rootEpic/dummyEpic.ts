@@ -1,8 +1,7 @@
+import { DummyActions, getTodo, gotToDo } from '../slices/dummySlice';
+import axios from 'axios';
 import { Observable, from } from 'rxjs';
 import { filter, map, mergeMap } from 'rxjs/operators';
-import axios from 'axios';
-
-import { DummyActions, getTodo, gotToDo } from '../slices/dummySlice';
 
 async function fetchDataTodo() {
   const result = await axios.get('https://jsonplaceholder.typicode.com/todos');

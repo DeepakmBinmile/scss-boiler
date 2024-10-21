@@ -33,14 +33,11 @@ const variableRules = {
   // disallow shadowing of names such as arguments
   'no-shadow-restricted-names': 'error',
 
-
-
   // disallow use of undefined when initializing variables
   'no-undef-init': 'error',
 
   // disallow use of variables before they are defined
   'no-use-before-define': ['error', { functions: true, classes: true, variables: true }],
 };
-
 
 export default variableRules;

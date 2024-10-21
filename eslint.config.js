@@ -9,7 +9,7 @@ import es6Rules from "./bnbLintRules/es6.js";
 import nodeRules from "./bnbLintRules/node.js";
 import strictRules from "./bnbLintRules/strict.js";
 import variableRules from "./bnbLintRules/variables.js";
-import importRules from "./bnbLintRules/imports.js";
+// import importRules from "./bnbLintRules/imports.js";
 
 
 export default [
@@ -46,6 +46,28 @@ export default [
       'quotes': ['error', 'single'],
       'max-lines': ['warn', { 'max': 100 }],
       'semi': ['warn', 'always'],
+      'no-trailing-spaces': 'error',
+      'import/order': [
+        'error',
+        {
+          'groups': [['builtin', 'external', 'internal', 'parent', 'sibling', 'index']],
+          'newlines-between': 'never', // Prevent extra spaces between import groups
+          'alphabetize': { order: 'asc', caseInsensitive: true },
+        },
+      ],
+      "react/jsx-tag-spacing": [
+      "error",
+      {
+        "beforeSelfClosing": "never",
+        "closingSlash": "never",
+        "afterOpening": "never",
+        "beforeClosing": "never"
+      }
+    ],
+    "react/jsx-curly-spacing": ["error", { "when": "never", "children": true }],
+    "react/jsx-closing-bracket-location": ["error", "line-aligned"],
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 0 }],
+      // 'react/jsx-newline': 'error',
       // airbnb best-practices
       ...goodPractices,
       ...errorsRules,

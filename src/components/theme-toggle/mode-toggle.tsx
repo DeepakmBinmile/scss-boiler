@@ -6,6 +6,7 @@ export function ModeToggle() {
   return (
     <div>
       <button onClick={() => setTheme('light')}>Light</button>
+
       <button onClick={() => setTheme('dark')}>Dark</button>
     </div>
   );

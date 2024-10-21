@@ -1,6 +1,5 @@
-import { Epic, combineEpics } from 'redux-observable';
-
 import { dummyEpic } from './dummyEpic';
+import { Epic, combineEpics } from 'redux-observable';
 
 const epics = [dummyEpic];
 

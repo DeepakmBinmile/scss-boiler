@@ -1,6 +1,6 @@
 /* eslint-disable max-lines */
-import semver from 'semver';
 import eslintPkg from 'eslint/package.json' assert { type: 'json' };
+import semver from 'semver';
 
 const styleRules = {
     // enforce line breaks after opening and before closing array brackets

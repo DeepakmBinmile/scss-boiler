@@ -1,8 +1,7 @@
-import { Controller, useFormContext } from 'react-hook-form';
+import { InputTextProps } from './type';
 import TextField from '@mui/material/TextField';
 import { useId } from 'react';
-
-import { InputTextProps } from './type';
+import { Controller, useFormContext } from 'react-hook-form';
 
 export const InputText = ({ name, label, placeholder }: InputTextProps) => {
   const { control } = useFormContext();
